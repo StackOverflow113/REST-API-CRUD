@@ -11,10 +11,11 @@ const dbSettings = { //CONFIGURACION DE LA BASE DE DATOS COMO SERVIDOR, USAURIO 
     }
 };
 
-async function getConnection() { // SE CREA UNA FUNCION PARA PROBAR CONECTAR A TRAVEZ DE LOS SIGUIENTES PARAMETROS A NUESTRA BASE DE DATOS. 
-    const pool = await sql.connect(dbSettings);
-    const result = await pool.request().query("SELECT CaUSUA_tUsuario,CaUSUA_tPassword FROM CatalogosSPC.dbo.CaUsuarios");
-    console.log(result);
+export async function getConnection() { // SE CREA UNA FUNCION PARA PROBAR CONECTAR A TRAVEZ DE LOS SIGUIENTES PARAMETROS A NUESTRA BASE DE DATOS. 
+    try {
+        const pool = await sql.connect(dbSettings);
+        return pool;
+    } catch (error) {
+        console.log(error);
+    }
 }
-//AUN NO SE EJECUTA POR QUE NO HAY NINGUNA PARTE QUE LO MANDE A LLAMAR ENTONCES LO MANDAREMOS A LLAMAR DESDE EL INDEX.JS
-getConnection();
