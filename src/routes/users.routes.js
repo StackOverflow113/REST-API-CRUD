@@ -1,13 +1,12 @@
 import { Router } from "express";
 import res from "express/lib/response";
-import { getUsers } from "../controllers/users.controllers";
+import { getUsers, createNewUser } from "../controllers/users.controllers";
 
 const router = Router();
 
-
 router.get('/users', getUsers)
 
-router.post('/users')
+router.post('/users', createNewUser);
 
 router.get('/users')
 
