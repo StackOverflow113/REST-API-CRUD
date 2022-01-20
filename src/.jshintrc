@@ -1,0 +1,11 @@
+//**************** ESTE ARCHIVO SOLUCIONA ERRORES EN CONSOLA COMO LOS MOSTRADOS A CONTINUACION: ******************//
+// 'import' is only available in ES6 (use 'esversion: 6'). (W119)
+// 'import' is only available in ES6 (use 'esversion: 6'). (W119)
+// 'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz). (W104)
+// 'export' is only available in ES6 (use 'esversion: 6'). (W119)
+//'async functions' is only available in ES8 (use 'esversion: 8'). (W119)
+{
+    "esversion": 9,
+    "asi": true
+    
+}
